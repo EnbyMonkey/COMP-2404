@@ -1,0 +1,92 @@
+
+***************************************************************************
+* Compilation
+***************************************************************************
+Executing: make clean
+Executing: make all
+
+Testing stack object array
+
+Executing: valgrind ./test
+Running:  ['valgrind', './test']
+Podcast: World's Most Podcasty Podcast
+Episode: Talking about things and stuff
+Episode #1
+Hi podcast words and things bla bla bla.
+Podcast: World's Most Podcasty Podcast
+Episode: Talking about things and stuff
+Episode #1
+Hi podcast words and things bla bla bla.
+Podcast: World's Most Podcasty Podcast
+Episode: Talking about things and stuff
+Episode #1
+Hi podcast words and things bla bla bla.
+
+'Episode' found, 2 marks
+'All heap blocks were freed -- no leaks are possible' found, 2 marks
+
+Testing stack pointer array
+
+Executing: valgrind ./test
+Running:  ['valgrind', './test']
+Podcast: World's Most Podcasty Podcast
+Episode: Talking about things and stuff
+Episode #1
+Hi podcast words and things bla bla bla.
+Podcast: World's Most Podcasty Podcast
+Episode: Talking about things and stuff
+Episode #1
+Hi podcast words and things bla bla bla.
+Podcast: World's Most Podcasty Podcast
+Episode: Talking about things and stuff
+Episode #1
+Hi podcast words and things bla bla bla.
+
+'Episode' found, 2 marks
+'All heap blocks were freed -- no leaks are possible' found, 2 marks
+
+Testing heap object array
+
+Executing: valgrind ./test
+Running:  ['valgrind', './test']
+Podcast: World's Most Podcasty Podcast
+Episode: Talking about things and stuff
+Episode #1
+Hi podcast words and things bla bla bla.
+Podcast: World's Most Podcasty Podcast
+Episode: Talking about things and stuff
+Episode #1
+Hi podcast words and things bla bla bla.
+Podcast: World's Most Podcasty Podcast
+Episode: Talking about things and stuff
+Episode #1
+Hi podcast words and things bla bla bla.
+
+'Episode' found, 2 marks
+'All heap blocks were freed -- no leaks are possible' found, 2 marks
+
+Testing heap pointer array
+
+Executing: valgrind ./test
+Running:  ['valgrind', './test']
+Podcast: World's Most Podcasty Podcast
+Episode: Talking about things and stuff
+Episode #1
+Hi podcast words and things bla bla bla.
+Podcast: World's Most Podcasty Podcast
+Episode: Talking about things and stuff
+Episode #1
+Hi podcast words and things bla bla bla.
+Podcast: World's Most Podcasty Podcast
+Episode: Talking about things and stuff
+Episode #1
+Hi podcast words and things bla bla bla.
+
+'Episode' found, 2 marks
+'All heap blocks were freed -- no leaks are possible' found, 2 marks
+
+
+***************************************************************************
+* Mark: 16/16
+***************************************************************************
+

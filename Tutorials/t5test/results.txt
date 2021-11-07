@@ -1,0 +1,145 @@
+
+***************************************************************************
+* Compilation
+***************************************************************************
+Executing: make clean
+Executing: make all
+
+Testing Podcast class
+
+Executing: ./test
+Podcast constructor enter
+Podcast constructor exit
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast title: Dogs
+Podcast host: Irene
+
+Episode print called
+Episode 1
+Episode Title: 0
+Episode print called
+Episode 2
+Episode Title: 1
+Episode print called
+Episode 3
+Episode Title: 2
+Episode print called
+Episode 4
+Episode Title: 3
+Episode print called
+Episode 5
+Episode Title: 4
+Podcast getEpisode called
+Podcast getEpisode returned true
+Episode play called
+Podcast: Dogs
+Episode: Episode Title: 3
+Episode #4
+Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia mol...
+Dogs found, 2 marks
+Episode Title: 3 found, 2 marks
+
+Testing Podcast destructor
+
+Executing: valgrind ./test
+Podcast constructor enter
+Podcast constructor exit
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast constructor enter
+Podcast constructor exit
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast constructor enter
+Podcast constructor exit
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode ca...
+All heap blocks were freed -- no leaks are possible found, 2 marks
+
+Testing Podcast deep copy
+
+Executing: ./test
+Podcast constructor enter
+Podcast constructor exit
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast addEpisode called
+Podcast addEpisode returned true
+Podcast copy constructor enter
+Episode copy constructor called
+Episode copy constructor called
+Episode copy constructor called
+Episode copy constructor called
+Episode copy constructor called
+Podcast copy constructor exit
+Podcast destructor enter
+Podcast denstructor exit
+Podcast title: Cats
+Podcast host: Bob
+
+Episode print called
+Episode 1
+Episode Title: 5
+Episode print called
+Episode 2
+Episode Title: 6
+Episode print called
+Episode 3
+Episode Title: 7
+Episode print called
+Episode 4
+Episode Title: 8
+Episode print called
+Episode 5
+Episode Title: 9
+Podcast getEpisode called
+Podcast getEpisode returned true
+Episode play called
+Podcast: Cats
+Episode: Ep...
+Cats found, 2 marks
+Vestibulum sapien found, 2 marks
+
+
+***************************************************************************
+* Mark: 10/10
+***************************************************************************
+

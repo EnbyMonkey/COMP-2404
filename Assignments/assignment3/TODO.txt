@@ -1,0 +1,19 @@
+TODO:
+- implement print() for each class (except Location, where print() is virtual)
+    - done for: StoreLocation, WHLocation, Queue, List, Product
+- add comment in header describing each class
+- add comments describing functions (as needed)
+- make README file
+- fix UML diagram: List <-> Product relation is not correctly represented
+- re-evaluate virtual functions -> should they be implemented in the base class or child class
+- is basic error-checking being done?
+- remove debugging
+- verify no leaks with valgrind
+    - find source of unitilized variable in WHLocation::add
+
+
+
+DONE:
+- rename variables across all files (naming convention in assignment instructions are not based on any good conventions)
+    - done for: Location, StoreLocation, WHLocation, Queue, List, Product
+    - not done for: Store, Control, View -> not my code (provided by instructor)
