@@ -1,4 +1,3 @@
-//#define DEBUG
 
 #include "Queue.h"
 
@@ -80,6 +79,6 @@ void Queue::print() const {
       iterate = iterate->next;
     }
   }
-  
+
   cout << endl;
 }

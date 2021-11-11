@@ -27,7 +27,7 @@ WHLocation.o: WHLocation.h WHLocation.cc Location.h
 StoreLocation.o: StoreLocation.h StoreLocation.cc Location.h
 	g++ -g -c StoreLocation.cc
 
-Location.o: Location.cc Location.h Product.h
+Location.o: Location.cc Location.h
 	g++ -g -c Location.cc
 
 Product.o: Product.cc Product.h

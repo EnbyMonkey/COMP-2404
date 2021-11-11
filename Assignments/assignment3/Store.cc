@@ -1,4 +1,3 @@
-// #define DEBUG
 
 #include "Store.h"
 
@@ -12,24 +11,16 @@ Store::Store(const string& storeName) {
 
 }
 
-Store::~Store() { // destroy!
-
+Store::~Store() {
+  delete products;
 }
 
 void Store::findAvailableSLoc(StoreLocation** sloc) {
-  #ifdef DEBUG
-    cout << "Store::findAvailableSLoc() called" << endl;
-  #endif
+
   for (int i = 0; i < SLOCS; ++i) {
-    #ifdef DEBUG
-    cout << "Store::findAvailableSLoc() looking at index " << i << endl;
-    cout << "isAvailable() returned " << slocs[i].isAvailable() << endl;
-    #endif
-    if (slocs[i].isAvailable()) {  // seg fault here
+
+    if (slocs[i].isAvailable()) {
       *sloc = slocs + i;
-      #ifdef DEBUG
-      cout << "Store::findAvailableSLoc() found at index " << i << endl;
-      #endif
       return;
     }
   }
