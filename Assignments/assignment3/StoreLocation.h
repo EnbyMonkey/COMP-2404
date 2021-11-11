@@ -9,20 +9,22 @@ class StoreLocation : virtual public Location {
 
   public:
     StoreLocation();
+    virtual ~StoreLocation();
 
     // setter
     void setProduct(const std::string& productName);
 
     // other
     int getFreeSpace() const;
-
-    // print function
-    virtual void print() const;
+    int getQuantity() const;
 
     // inherited from Location
     virtual int getCapacity() const;
     virtual bool add(const std::string& productName, int quantityToAdd);
     virtual bool remove(int quantityToRemove);
+
+    // print function
+    virtual void print() const;
 
   private:
     static const char code;

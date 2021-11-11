@@ -1,4 +1,3 @@
-//#define DEBUG
 
 #include <sstream>
 #include <iostream>
@@ -9,37 +8,18 @@ using namespace std;
 // initialize static attribute
 const string Location::NONE = "Empty";
 
-// constructor
+// ctor and dtor
 Location::Location(char code, int nextId) {
   stringstream ss;
-  ss << code << nextId; // concatenate c and n
+  ss << code << nextId;
   id = ss.str();
 
   product = NONE; // initially a Location (StoreLocation or WHLocation) does not have a product assigned to it
   quantity = 0;
 }
 
-// getters
-string Location::getId() const {
-  return id;
-}
+Location::~Location() {}
 
-string Location::getProduct() const {
-  return product;
-}
-
-int Location::getQuantity() const {
-  return quantity;
-}
-
-// setters
-void Location::setProduct(const std::string& productName) {
-  this->product = productName;
-}
-
-void Location::setQuantity(int newQuantity) {
-  quantity = newQuantity;
-}
 
 // other
 

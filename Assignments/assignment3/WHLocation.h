@@ -9,6 +9,10 @@ class WHLocation : virtual public Location {
 
   public:
     WHLocation();
+    virtual ~WHLocation();
+
+    // getters
+    int getQuantity();
 
     // inherited from Location class
     virtual int getCapacity() const;
