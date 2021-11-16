@@ -4,13 +4,9 @@
 using namespace std;
 
 
-// constructor
-Product::Product(const string& productName, StoreLocation* sloc) {
-  name = productName;
-  this->sloc = sloc;
-
-  whlocQueue = new Queue;
-}
+// ctor & dtor
+Product::Product(const string& productName, StoreLocation* sloc) :
+  name{productName}, sloc{sloc}, whlocQueue(new Queue) { }
 
 Product::~Product() {
   delete whlocQueue;

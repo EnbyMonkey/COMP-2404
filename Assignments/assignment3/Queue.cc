@@ -4,13 +4,9 @@
 using namespace std;
 
 
-// constructor
-Queue::Queue() {
-  head = nullptr;
-  tail = nullptr;
-}
+// ctor & dtor
+Queue::Queue() : head{nullptr}, tail{nullptr} { }
 
-// destructor
 Queue::~Queue() {
   Node* iterate = nullptr;
   if (!isEmpty()) {
@@ -22,7 +18,6 @@ Queue::~Queue() {
     iterate = iterate->next;
     delete temp;
   }
-
 }
 
 
@@ -76,6 +71,7 @@ void Queue::print() const {
     cout << "The warehouse locations in the queue are:" << endl;
     while (iterate != nullptr) {
       iterate->data->print();
+      cout << endl;
       iterate = iterate->next;
     }
   }

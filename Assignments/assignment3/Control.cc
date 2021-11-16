@@ -29,6 +29,9 @@ void Control::launch(){
             case 3: store->printStoreStock(); break;
             case 4: store->printWareHouseStock(); break;
             case 5: store->printProducts(); break;
+            case 6: locationTest(); break;
+            case 7: queueTest(); break;
+
         }
     }
     delete store;
@@ -62,43 +65,52 @@ void Control::initStore(Store* store){
 
 
 void Control::locationTest(){
-    string candy = "Candy";
+  string candy = "Candy";
 	string junk = "Junk";
-    StoreLocation loc1, loc2;
-	Product* product = new Product(candy,&loc1);
+  StoreLocation location, loc1;
+	Product* product = new Product(candy,&location);
 
 	product->print();
-
-	Product p(junk, &loc2);
-
-	p.print();
-	StoreLocation location;
-
+  cout << endl;
 	cout << "Unstocked location:"<<endl<<endl;
-
 	location.print();
+  cout << endl;
 
 	int q = 10;
 
 
 	location.add(product->getName(), q);
-	cout<<"q: "<<location.getQuantity()<<endl;
+  cout << "Added " << q << " " << product->getName() << "s." << endl;
+	cout<<"Checking quantity: "<<location.getQuantity()<< " " << product->getName() << " found." <<endl;
 	location.print();
+  cout << endl << endl;
 
+  cout << "Removing " << q << " " << product->getName() << endl;;
 	location.remove(q);
+
 	location.print();
+  cout << endl << "(Should be empty)" << endl;
 	q = 5;
 	location.add(product->getName(), q);
+  cout << "Added " << q << " " << product->getName() << endl;
 	location.print();
-	cout<<"q: "<<location.getQuantity()<<endl;
+	cout << endl << "Checking quantity: " << location.getQuantity() << " "
+       << product->getName() << " found." << endl << endl;
 
-	q = 5;
 
 	WHLocation loc;
+  Product p(junk, &loc1);
+  p.print();
+  cout << endl;
 
 	loc.print();
+  cout << endl << "(Should be empty)" << endl;
 	loc.add(p.getName(), q);
+  cout << "Added " << q << " " << p.getName() << "s." << endl;
 	loc.print();
+  cout << endl;
+
+  delete product;
 }
 
 void Control::queueTest(){
@@ -123,6 +135,7 @@ void Control::queueTest(){
 
     q->peekFirst(&whloc);
     whloc->print();
+    cout << endl;
 
     cout<<"Deleting all but one.."<<endl;
     for (int i = 0; i < 4; ++i){
@@ -137,6 +150,7 @@ void Control::queueTest(){
 
     q->peekFirst(&whloc);
     whloc->print();
+    cout << endl;
 
     cout<<"Adding 4 locations to q"<<endl;
     for (int i = 0; i < 4; ++i){
@@ -151,6 +165,7 @@ void Control::queueTest(){
 
     q->peekFirst(&whloc);
     whloc->print();
+    cout << endl;
 
     cout<<"Deleting everything.."<<endl;
 

@@ -5,6 +5,7 @@
 using namespace std;
 
 
+// ctor & dtor
 List::List() : head(nullptr) { }
 
 List::~List()

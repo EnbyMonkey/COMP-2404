@@ -1,20 +1,17 @@
 
 #include "Store.h"
 
-
 using namespace std;
 
-Store::Store(const string& storeName) {
-  this->storeName = storeName;
-  products = new List;
 
-
-}
+// ctor & dtor
+Store::Store(const string& storeName) : storeName{storeName}, products(new List) { }
 
 Store::~Store() {
   delete products;
 }
 
+// other
 void Store::findAvailableSLoc(StoreLocation** sloc) {
 
   for (int i = 0; i < SLOCS; ++i) {

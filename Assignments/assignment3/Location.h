@@ -18,7 +18,7 @@ class Location {
 
     // virtual
     virtual int getCapacity() const = 0;
-    virtual bool add(const std::string & productName, int quantityToAdd) = 0;
+    virtual bool add(const std::string& productName, int quantityToAdd) = 0;
     virtual bool remove(int quantityToRemove) = 0;
     virtual void print() const = 0;
 

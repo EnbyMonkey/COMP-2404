@@ -12,16 +12,16 @@ class Store;
 using namespace std;
 
 class Control {
-		
+
 	public:
-		
+
 		void launch();
 
 
 	private:
 		Store* store;
 		View view;
-		void initStore(Store*);
+		void initStore(Store* store);
 		void receiveProduct();
 		void fillOrder();
 		void locationTest();
@@ -29,9 +29,9 @@ class Control {
 
 		static const string PRODUCTS[10];
 		static const int QUANTITIES[10];
-		
-		
-		
-	
+
+
+
+
 };
 #endif

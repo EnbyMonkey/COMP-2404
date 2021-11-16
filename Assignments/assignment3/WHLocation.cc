@@ -9,11 +9,8 @@ const char WHLocation::code = 'B';
 const int WHLocation::capacity = WHLOC_CAPACITY;
 int WHLocation::nextId = 0;
 
-// ctor
-WHLocation::WHLocation() : Location(code, nextId) {
-  ++nextId; // each instance of WHLocation will have a different id (B0, B1, etc)
-}
-
+// ctor & dtor
+WHLocation::WHLocation() : Location(code, nextId++) { }
 WHLocation::~WHLocation() {}
 
 // getters

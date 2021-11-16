@@ -10,11 +10,8 @@ const int StoreLocation::capacity = SLOC_CAPACITY;
 int StoreLocation::nextId = 1;
 
 
-// ctor and dtor
-StoreLocation::StoreLocation() : Location(code, nextId) {
-  ++nextId; // each instance of StoreLocation will have a different id (A0, A1, etc)
-}
-
+// ctor & dtor
+StoreLocation::StoreLocation() : Location(code, nextId++) { }
 StoreLocation::~StoreLocation() {}
 
 

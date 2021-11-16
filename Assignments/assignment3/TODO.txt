@@ -2,12 +2,25 @@ TODO:
 - add comment in header describing each class
 - add comments describing functions (as needed)
 - make README file
-- fix UML diagram: List <-> Product relation is not correctly represented
-- is basic error-checking being done?
-
+- should I change the implementation of getQuantity() in StoreLocation and WHLocation
+  - make it virtual in Location class?
+- fix UML diagram:
+  - List <-> Product relation is not correctly represented
+  - remove Queue and List
+  - make sure function arguments have correct name
 
 
 DONE:
+- is basic error-checking being done?
+  - when typing in console a product that has a space (e.g. AOL cd) program enters infinite loop,
+  with option menu printing repeatedly
+  Soln: replaced
+    cin >> product;
+  with
+    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    getline(cin, product);
+  in View::getProduct()
+- forward initialization syntax
 - implement print() for each class (except Location, where print() is virtual)
     - done for: StoreLocation, WHLocation, Queue, List, Product, Store
 - rename variables across all files (naming convention in assignment instructions are not based on any good conventions)
