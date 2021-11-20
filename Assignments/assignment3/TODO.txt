@@ -1,16 +1,16 @@
 TODO:
 - add comment in header describing each class
 - add comments describing functions (as needed)
-- make README file
 - should I change the implementation of getQuantity() in StoreLocation and WHLocation
   - make it virtual in Location class?
+
+
+DONE:
 - fix UML diagram:
   - List <-> Product relation is not correctly represented
   - remove Queue and List
   - make sure function arguments have correct name
-
-
-DONE:
+- make README file
 - is basic error-checking being done?
   - when typing in console a product that has a space (e.g. AOL cd) program enters infinite loop,
   with option menu printing repeatedly
