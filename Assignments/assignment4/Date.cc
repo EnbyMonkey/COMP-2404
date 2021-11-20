@@ -57,7 +57,11 @@ bool Date::operator<(const Date& d) const{
 		}
 	}else{
 		return year < d.year;
-	}	
+	}
+}
+
+int Date::operator-(const Date& d) const {
+	return this->toDays() - d.toDays();
 }
 
 int Date::toDays() const{
@@ -68,7 +72,7 @@ int Date::toDays() const{
 	return days;
 }
 
-ostream& operator<<(ostream& out, Date& d){
+ostream& operator<<(ostream& out, const Date& d){
 	return out << d.getMonthName()<<" "<<d.getDay()<<", "<<d.getYear()<<endl;
 }
 
@@ -86,4 +90,3 @@ int Date::getDaysIn(int month) const{
 		default:			return 31;
 	}
 }
-

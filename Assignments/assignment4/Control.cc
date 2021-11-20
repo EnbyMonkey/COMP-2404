@@ -62,6 +62,4 @@ void Control::initAirline(Airline& al){
     al.install(ac_reg[2],parts[8], d);
     al.install(ac_reg[2],parts[9], d);
 
-
 }
-
