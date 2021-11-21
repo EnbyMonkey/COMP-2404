@@ -63,12 +63,19 @@ void Airline::inspectionReport(const string& registration, Date& date) {
   Aircraft* aircraft = getAircraft(registration);
   if (aircraft == nullptr) return;
 
-  cout  << endl << endl << *aircraft;
+  cout  << endl << endl;
   Array<Part*> partsToInspect;
-   aircraft->inspectionReport(date, &partsToInspect);
-   for (int i = 0; i < partsToInspect.getSize(); ++i) {
-     cout << *partsToInspect[i];
-   }
+  aircraft->inspectionReport(date, &partsToInspect);
+
+  if (partsToInspect.getSize() == 0) {
+    cout << aircraft->getRegistration() << " has no parts requiring inspection." << endl;
+    return;
+  }
+
+  cout << "The following parts in " << aircraft->getRegistration() << " require inspection:" << endl;
+  for (int i = 0; i < partsToInspect.getSize(); ++i) {
+    cout << left << setw(4) << to_string(i+1) + ". " << *partsToInspect[i] << endl;
+  }
 }
 
 bool Airline::install(const string& registration, const string& partName, Date& date) {
@@ -85,7 +92,7 @@ bool Airline::install(const string& registration, const string& partName, Date& 
 void Airline::printAircraft() const {
   cout << endl << endl << "Aircraft in " << airlineName << ":" << endl << endl;
   for (int i = 0; i < aircraft.getSize(); ++i) {
-    cout << *aircraft[i] << endl;
+    cout << left << i+1 << setw(3) << ". " << *aircraft[i] << endl;
   }
   cout << endl;
 }
@@ -93,7 +100,7 @@ void Airline::printAircraft() const {
 void Airline::printParts() const {
   cout << endl << endl << "Parts in " << airlineName << ":" << endl << endl;
   for (int i = 0; i < parts.getSize(); ++i) {
-    cout << *parts[i];
+    cout << left << setw(4) << to_string(i+1) + ". " << *parts[i] << endl;
   }
   cout << endl;
 }

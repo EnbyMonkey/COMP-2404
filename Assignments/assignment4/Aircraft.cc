@@ -33,9 +33,9 @@ void Aircraft::inspectionReport(Date& date, Array<Part*>* partsToInspect) {
 }
 
 ostream& operator<<(ostream& out, const Aircraft& a) {
-  out << a.type << ", registration: " << a.registration << ", flight hours: " << a.flightHours << ", parts:" << endl;
-  for (int i = 0; i < a.parts.getSize(); ++i) {
-    out << "   " << a.parts[i];
-  }
+  out << left << setw(15) << "Aircraft:" << a.type << endl << setw(4) << ""
+      << setw(15) << "Registration: " << a.registration << endl << setw(4) << ""
+      << setw(15) << "Flight hours: " << a.flightHours << endl;
+
   return out;
 }

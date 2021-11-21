@@ -2,7 +2,7 @@
 #include "Date.h"
 
 Date::Date(){
-	setDate(1,1,1901);
+	setDate(1901,1,1);
 }
 
 Date::Date(int y, int m, int d){
@@ -73,7 +73,7 @@ int Date::toDays() const{
 }
 
 ostream& operator<<(ostream& out, const Date& d){
-	return out << d.getMonthName()<<" "<<d.getDay()<<", "<<d.getYear()<<endl;
+	return out << d.getMonthName()<<" "<<d.getDay()<<", "<<d.getYear();
 }
 
 int Date::getMaxDay() const{
