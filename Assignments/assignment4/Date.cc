@@ -35,7 +35,7 @@ void Date::setDate(int y, int m, int d){
 }
 
 void Date::setDate(Date& d){
-	setDate(d.day, d.month, d.year);
+	setDate(d.year, d.month, d.day);
 }
 
 

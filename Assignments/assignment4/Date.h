@@ -19,7 +19,7 @@ class Date {
 
 
 		//setters
-		void setDay( int);
+		void setDay(int);
 		void setMonth(int);
 		void setYear(int);
 		void setDate(int, int, int);
