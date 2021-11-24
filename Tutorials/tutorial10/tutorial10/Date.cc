@@ -2,7 +2,7 @@
 #include "Date.h"
 
 Date::Date(){
-	setDate(1,1,1901);
+	setDate(1901,1,1);
 }
 
 Date::Date(int y, int m, int d){
@@ -35,7 +35,7 @@ void Date::setDate(int y, int m, int d){
 }
 
 void Date::setDate(Date& d){
-	setDate(d.day, d.month, d.year);
+	setDate(d.year, d.month, d.day);
 }
 
 
@@ -57,7 +57,7 @@ bool Date::operator<(const Date& d) const{
 		}
 	}else{
 		return year < d.year;
-	}	
+	}
 }
 
 int Date::toDays() const{
@@ -86,4 +86,3 @@ int Date::getDaysIn(int month) const{
 		default:			return 31;
 	}
 }
-
