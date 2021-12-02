@@ -6,11 +6,9 @@
 #include <string>
 #include <iomanip>
 
-using namespace std;
-
 class Date {
 
-	friend ostream& operator<<(ostream& out, const Date&);
+	friend std::ostream& operator<<(std::ostream& out, const Date&);
 
 	public:
 		//constructor

@@ -14,8 +14,8 @@ class Airline {
     bool addAircraft(const std::string& type, const std::string registration);
     bool addPart(const std::string& partName, int fh_inspect, int it_inspect);
     bool takeFlight(const std::string& registration, int flightHours);
-    void inspectionReport(const string& registration, Date& d);
-    bool install(const string& aircraftRegistration, const string& partName, Date& d);
+    void inspectionReport(const std::string& registration, Date& d);
+    bool install(const std::string& aircraftRegistration, const std::string& partName, Date& d);
 
     // printing
     void printAircraft() const;

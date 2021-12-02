@@ -13,7 +13,7 @@ class Part {
     virtual ~Part();
 
     // getters
-    const string getPartName() const;
+    const std::string getPartName() const;
 
     // other
     void addFlightHours(int fh);
@@ -77,7 +77,7 @@ class FHIT_Part : virtual public FH_Part, virtual public IT_Part {
 };
 
 // overload operator<<
-inline ostream& operator<<(ostream& os, const Part& p) {
+inline std::ostream& operator<<(std::ostream& os, const Part& p) {
     p.print(os);
     return os;
 }

@@ -1,6 +1,8 @@
 
 #include "Date.h"
 
+using namespace std;
+
 Date::Date(){
 	setDate(1901,1,1);
 }

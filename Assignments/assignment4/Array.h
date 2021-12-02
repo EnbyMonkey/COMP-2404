@@ -48,7 +48,7 @@ bool Array<T>::isFull() const {	return size >= MAX_ARR; }
 template<class T>
 T Array<T>::operator[](int index) const {
   if (index < 0 || index >= size) {
-		cerr<<"Array index out of bounds"<<endl;
+		std::cerr << "Array index out of bounds" << std::endl;
 		exit(1);
 	}
 	return elements[index];
@@ -56,10 +56,10 @@ T Array<T>::operator[](int index) const {
 
 // overload << operator
 template<class T>
-ostream& operator<<(ostream& output, const Array<T>& arr) {
-	output << "Array of size " << arr.getSize() << endl;
-	output << "Elements in the array:" << endl;
-	for (int i = 0; i < arr.getSize(); ++i) output << arr[i] << endl;
+std::ostream& operator<<(std::ostream& output, const Array<T>& arr) {
+	output << "Array of size " << arr.getSize() << std::endl;
+	output << "Elements in the array:" << std::endl;
+	for (int i = 0; i < arr.getSize(); ++i) output << arr[i] << std::endl;
 
   return output;
 }

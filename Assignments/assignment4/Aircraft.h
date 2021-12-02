@@ -20,7 +20,7 @@ class Aircraft {
     void inspectionReport(Date& date, Array<Part*>* partsToInspect);
 
     // print
-    friend ostream& operator<<(ostream& out, const Aircraft& a);
+    friend std::ostream& operator<<(std::ostream& out, const Aircraft& a);
 
   private:
     std::string type; // the aircraft type
